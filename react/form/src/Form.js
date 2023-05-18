@@ -3,7 +3,7 @@ import {useState} from 'react';
 function Form (props){
     
     const [user,setUser]=useState({
-        name1:"",
+        name:"",
         lastname:"",
         gender:"",
         email:"",
