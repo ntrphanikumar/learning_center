@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
- //import {Link} from 'react-router-dom';
+ import React, { useState } from 'react';
+// import { useHistory } from 'react-router-dom';
 //import Tables from './Tables';
 //import ReactDOM from 'react-dom';
 
 function Form() {
+    
   // const [array,setArray]=useState([])
   let array = JSON.parse(localStorage.getItem('details') || '[]')
   const [inputdata, setInputdata] = useState({
@@ -14,17 +15,7 @@ function Form() {
       phoneno: "",
       college: ""
   });
-  // useEffect(() => {
-  //   const storedData = JSON.parse(localStorage.getItem('details'));
-  //   console.log(storedData)
-  //   if (storedData) {
-  //     setArray(storedData);
-  //   }
-  // }, []);
-  // useEffect(() => {
-  //   localStorage.setItem('details', JSON.stringify(array));
-  // }, [array]);
-
+  
 
   const handleChange= (e) => {
     setInputdata({ ...inputdata, [e.target.name]: e.target.value });
@@ -34,7 +25,7 @@ function Form() {
   
   const handleClick = (e) => {
     e.preventDefault();
-    array = [...array, inputdata];
+    array=[...array,inputdata]
     localStorage.setItem('details', JSON.stringify(array));
     alert("Successful submit");
     setInputdata({name: "",
@@ -45,7 +36,7 @@ function Form() {
     college: ""
     });
     //console.log(array);
-    window.location.href = '/beforepop';
+   window.location.href="/tablelist";
   };
 
   return (
