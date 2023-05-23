@@ -1,55 +1,75 @@
+
+
 .container {
   max-width: 400px;
   margin: 0 auto;
-  padding: 10px;
-  
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.container h1 {
-  font-size: 24px;
+h1 {
+  text-align: center;
   margin-bottom: 20px;
 }
 
-.container form {
+form {
   display: flex;
   flex-direction: column;
-  background-color: darkgrey;
-  border: 3px solid rgb(17, 16, 16);  
-  /* outline: 3px solid blue;   */
-  border-radius: 12px;  
-  font-size: 12px;  
-  font-weight: bold;  
-  margin: 20px;  
-  padding: 30px;  
-  outline-offset: 0.5em;
 }
 
-.container label {
+label {
   font-weight: bold;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+select {
   margin-bottom: 5px;
-}
-
-.container input,
-.container select {
-  margin-bottom: 1px;
   padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 3px;
+  border: 1px solid #cfb1b1;
 }
 
-.container button {
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  color: white;
+button {
+  padding: 10px 15px;
+  background-color: #148cb1;
+  color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 3px;
   cursor: pointer;
 }
 
-.container button:hover {
-  background-color: #45a049;
+a {
+  display: block;
+  margin-bottom: 10px;
+  color: #2f00ff;
+  text-decoration: none;
 }
 
-.container table,.container th,.container td{
-  border: 1px solid black;
+a:hover {
+  text-decoration: underline;
+} */
+
+
+
+.delete-button {
+  padding: 5px 10px;
+  background-color: #df5f6c;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
 }
+
+.edit-button {
+  padding: 5px 10px;
+  background-color: #228adf;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
