@@ -20,15 +20,19 @@ const BeforePop = () => {
   const handleChange = (e) => {
     setEditDetails({ ...editdetails, [e.target.name]: e.target.value });
   };
-
   const handleClick = (e, index) => {
-  e.preventDefault();
-  const updatedDetails = [...data];
-  updatedDetails[index] = { ...updatedDetails[index], ...editdetails };
-  setData(updatedDetails);
-  localStorage.setItem('details', JSON.stringify(updatedDetails));
-};
-
+    const updatedDetails = [...data];
+    updatedDetails[index] = { ...updatedDetails[index], ...editdetails };
+    setData(updatedDetails);
+    localStorage.setItem('details', JSON.stringify(updatedDetails));
+    window.location.href="/tablelist"
+  };
+  const handleDelete = (index) => {
+    const updatedDetails = [...data];
+    updatedDetails.splice(index, 1); // Remove the row at the specified index
+    setData(updatedDetails);
+    localStorage.setItem('details', JSON.stringify(updatedDetails));
+  }
   const backForm = () => {
     window.location.href = '/back';
   };
@@ -73,19 +77,23 @@ const BeforePop = () => {
                       <input type="text" name="phoneno" defaultValue={item.phoneno} value={editdetails.phoneno} onChange={handleChange}></input>
                       <label>college :</label>
                       <input type="text" name="college" defaultValue={item.college} value={editdetails.college} onChange={handleChange}></input>
-                      <button onClick={handleClick}>save</button>
+                      <button onClick={(e)=>{handleClick(e,index)}}>save</button>
+                      
                     </div>
                     
                   </Popup>
+                  <td><button onClick={()=>handleDelete(index)}>Delete</button></td>
+                  
                 </td>
               </tr>
             ))}
-            <button onClick={backForm}>Back</button>
+           
           </tbody>
         </table>
+        <button onClick={backForm}>Back</button>
       </div>
     </>
-  );
+  )
 };
 
 export default BeforePop;
