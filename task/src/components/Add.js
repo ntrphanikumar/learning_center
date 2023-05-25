@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+import Edit from'./Home'
 
 function Add() {
   const navigate = useNavigate();
   const [blogs, setBlogs] = useState([]);
+  const [isEdit, setIsEdit] = useState(false);
+  
 
   useEffect(() => {
     const storedBlogs = localStorage.getItem('blogs');
@@ -20,8 +25,10 @@ function Add() {
   };
 
   const handleEdit = (blogIndex) => {
+    setIsEdit(true)
+    
     localStorage.setItem('editIndex', blogIndex);
-    navigate('/Edit');
+    
   };
 
   return (
@@ -73,7 +80,15 @@ function Add() {
                   </tr>
                 )}
               </tbody>
+
             </table>
+            <Popup open={isEdit} onClose={() => setIsEdit(false)}>
+        <div className="popup-content">
+          <div className="popup-content">
+            <Edit   setIsEdit={setIsEdit} />
+          </div>
+        </div>
+      </Popup>
           </div>
         </div>
       </div>

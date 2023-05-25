@@ -59,6 +59,7 @@ function Home() {
         <br></br>
       <input type="checkbox" name="taf" onChange={(e)=>settaf(e.target.checked)}></input><span className="pp">Agree</span>
       <br/>
+      <input className="form__input" name="add" type="Url"></input>
       <input type="submit"   className="button"></input>
       </div>
       </div> 
