@@ -1,21 +1,26 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './components/Home';
-import Add from './components/Add';
-import Edit from './components/Edit';
-import './components/Restuo.css'
+import Div1 from "./aps"
+import './App.css';
+import Bor from "./bar";
+import DoughnutGraph from "./donut"
+import Tab from "./table"
+
+
+import LineChart from './line';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/add" element={<Add />} />
-        <Route path="/edit" element={<Edit />} />
-      </Routes>
-    </BrowserRouter>
+    <div className="container1" >
+  <Div1/>
+  <LineChart/>
+  <div className="con">
+  <DoughnutGraph/>
+  <Bor/>
+  </div > 
+  <Tab/>
+    </div>
   );
 }
 
 export default App;
+
 

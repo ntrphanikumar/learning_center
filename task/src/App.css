@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  
+
 }
 
 .App-logo {
@@ -35,4 +37,159 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@media screen {
+  .container {
+  margin: 50px; 
+  
+  }
+}
+
+.container {
+  box-shadow: #d2d2ef;
+  width: 400px;
+  height: 200px;
+}
+.dashboard{
+  margin: 30px 140px 30px 134px;
+  font-family: Inter;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.horizontal-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  font-size: 10px;
+}
+
+.horizontal-list li {
+  display: flex;
+  align-items: center;
+  margin-right: 160px;
+}
+
+.dot {
+  display: inline-block;
+  width: 15px; /* Adjust the width to control the size of the dot */
+  height: 15px; /* Adjust the height to control the size of the dot */
+  border-radius: 50%;
+  margin-right: 5px;
+  
+}
+
+.dot-green {
+  background-color: #22d59b;
+}
+
+.dot-grey {
+  background-color: #6f7c8b;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap : nowrap;
+  align-content: flex-start;
+  height: 400px;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 50px;
+  font-size: 30px;
+}
+
+.box {
+  width: 400px;
+  height: 100px;
+  margin: 12px 16px 30px 134px;
+  padding: 0px 0 0.5px 20px;
+  border-radius: 6px;
+  background-image: radial-gradient(circle at 45% 24%, #dffce4, #b9f2d1 114%);
+}
+
+.bgcolor {
+  background-image: radial-gradient(circle at 45% 24%, #eaeffd, #d2d2ef 125%);
+}
+
+.total {
+  width: 33px;
+  height: 17px;
+  margin: 0 69px 3px 0;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0);
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #120724;
+}
+
+.head {
+  width: 102px;
+  height: 51px;
+  margin: 3px 0 0;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0);
+  font-family: Inter;
+  font-size: 42px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #120724;
+}
+table{
+  border: #120724;
+  border-radius: 10px;
+  box-shadow: #120724;
+}
+
+.con{
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  width: 100%;
+  padding-top: 80px;
+
+
+}
+.bar{
+  height: 300px;
+  width: 400px;
+}
+
+.tabdiv{
+  padding-top: 100px;
+  width: 400px;
+  height: 500px;
+}
+.dasdiv{
+  width: 400px;
+  height: 200px;
+}
+
+.container1 {
+  border-radius: 5px;
+  
+  padding: 10px;
+
+}
+
+table,th,td{
+  border:1px solid black;
+  border-collapse: collapse;
+}
+.button-container{
+  float:right;
+  display:flex;
 }
